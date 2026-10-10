@@ -1,2 +1,3 @@
-98154b459c6299ad312af639b04d935da77a8ab1568cce505ead1d9260e0dcc2  QVET-Demo-macOS.zip
-c55ea07d3c5990f8cd8045ac07a1e3dcb7cd8ba683d227e0e4f103a13e16fd87  QVET-Demo-Windows.zip
+da714d53e2cc1585ac0c47661d63c604516de83f119f95550eae79da7c9a1f83  QVET-Demo-macOS.zip
+ac5c7fad9aa9425cd4c4de176e9b13ce8bd9aa27e9b8e546acc6a248e94639aa  QVET-Demo-Windows.zip
+bc271185f388f68bad9b2d1f61212d6d81e356ef35b615bc99e3d1fb9b81a3a2  Install-QVET-Demo-Windows.cmd

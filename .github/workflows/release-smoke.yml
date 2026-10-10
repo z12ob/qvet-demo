@@ -1,0 +1,86 @@
+name: Release package smoke test
+
+on:
+  workflow_dispatch:
+    inputs:
+      release_tag:
+        description: Release tag to verify
+        required: true
+        default: v1.0.1
+
+permissions:
+  contents: read
+
+jobs:
+  windows:
+    runs-on: windows-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Download Windows release
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release download "${{ inputs.release_tag }}" --repo "${{ github.repository }}" --pattern "QVET-Demo-Windows.zip"
+
+      - name: Install from the release archive
+        shell: pwsh
+        run: |
+          Expand-Archive -LiteralPath "QVET-Demo-Windows.zip" -DestinationPath "download"
+          $env:QVET_PACKAGE_ARCHIVE = (Resolve-Path "QVET-Demo-Windows.zip").Path
+          $env:QVET_INSTALL_ROOT = Join-Path $env:RUNNER_TEMP "qvet-installed"
+          $env:QVET_RUNTIME_ROOT = Join-Path $env:RUNNER_TEMP "qvet-runtime"
+          $env:QVET_PYTHON = (Get-Command python).Source
+          $env:QVET_NONINTERACTIVE = "1"
+          $env:QVET_SKIP_SHORTCUTS = "1"
+          & ".\download\QVET-Demo\Install QVET Demo.cmd"
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+
+      - name: Verify SUMO and Autonomy
+        shell: pwsh
+        run: |
+          $env:QVET_NONINTERACTIVE = "1"
+          $root = Join-Path $env:RUNNER_TEMP "qvet-installed\QVET-Demo"
+          & "$root\Verify QVET Demo.cmd" --auto
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          if (-not (Test-Path "$root\.qvet-demo-ready")) { throw "Ready marker missing" }
+
+  macos:
+    runs-on: macos-14
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Download macOS release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release download "${{ inputs.release_tag }}" --repo "${{ github.repository }}" --pattern "QVET-Demo-macOS.zip"
+
+      - name: Install from the release archive
+        run: |
+          ditto -x -k "QVET-Demo-macOS.zip" "download"
+          chmod +x download/QVET-Demo/*.command
+          export QVET_PACKAGE_ARCHIVE="$PWD/QVET-Demo-macOS.zip"
+          export QVET_INSTALL_ROOT="$RUNNER_TEMP/qvet-installed"
+          export QVET_NONINTERACTIVE=1
+          download/QVET-Demo/Install\ QVET\ Demo.command
+
+      - name: Verify SUMO and Autonomy
+        run: |
+          export QVET_NONINTERACTIVE=1
+          root="$RUNNER_TEMP/qvet-installed/QVET-Demo"
+          "$root/Verify QVET Demo.command" --auto
+          test -f "$root/.qvet-demo-ready"

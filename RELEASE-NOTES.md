@@ -1,6 +1,20 @@
-# QVET Demo v1.0.0
+# QVET Demo v1.0.1
 
-The first portable QVET recording kit for macOS and Windows.
+Reliability update for the portable QVET recording kit on macOS and Windows.
+
+## Installation repair
+
+- Added a one-click Windows installer that downloads, extracts, prepares, and
+  verifies the complete package in a stable per-user location.
+- Added an install-first macOS launcher inside the signed-mode ZIP structure.
+- Added automatic setup recovery to every Run and Verify launcher.
+- Added a durable ready marker that is written only after SUMO dependencies,
+  locked web dependencies, and the production cockpit build all succeed.
+- Moved the Windows Python runtime to a short application-data path to prevent
+  SUMO installation failures caused by legacy path-length limits.
+- Replaced the misleading `Run Setup first` fallback with a precise compressed
+  ZIP or setup-log diagnosis.
+- Added persistent setup logs under `logs/setup.log`.
 
 ## Highlights
 
@@ -15,7 +29,8 @@ The first portable QVET recording kit for macOS and Windows.
 
 ## Package notes
 
-- First setup requires internet access, Python 3.10 or newer, and Node.js 22 LTS.
+- First setup requires internet access. Python 3.10 or newer and Node.js 22 or
+  newer are used when installed; Windows setup can bootstrap missing tools.
 - Live OpenStreetMap tiles require internet access during the demo.
 - The Autonomy launcher and verification checks wait up to 60 seconds for startup on slower laptops.
 - The release archives do not contain repository history, credentials, or keys.

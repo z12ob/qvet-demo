@@ -19,15 +19,17 @@ No source repository clone is required.
 - macOS 13 or newer: Apple silicon and Intel
 - Windows 10 or 11: x86-64
 
-The first setup requires Python 3.10 or newer, Node.js 22 LTS, and an internet
-connection. Setup creates an isolated Python environment and installs the
-locked web dependencies inside the extracted demo folder.
+The first setup requires an internet connection. The installer uses an existing
+Python 3.10 or newer and Node.js 22 or newer installation when available. On
+Windows it can prepare missing prerequisites with Windows Package Manager.
+Setup creates an isolated Python environment and installs locked web
+dependencies without requiring a source repository clone.
 
 ## Start on macOS
 
 1. Download and extract `QVET-Demo-macOS.zip`.
-2. Open Terminal in the extracted `QVET-Demo` folder.
-3. Run `./Setup\ QVET\ Demo.command`.
+2. Double-click `Install QVET Demo.command` in the extracted folder.
+3. Open the installed QVET Demo folder when setup completes.
 4. Launch the Autonomy, Traffic, or Dashboard `.command` file.
 
 If macOS blocks the first launch, use System Settings, Privacy & Security, then
@@ -35,9 +37,16 @@ Open Anyway.
 
 ## Start on Windows
 
-1. Download and extract `QVET-Demo-Windows.zip`.
-2. Run `Setup QVET Demo.cmd`.
-3. Launch the Autonomy, Traffic, or Dashboard `.cmd` file.
+1. Download `Install-QVET-Demo-Windows.cmd` from the latest release.
+2. Double-click the installer. It downloads and extracts the complete kit to a
+   stable per-user folder.
+3. Launch Autonomy, Traffic, Dashboard, or Verify from the desktop shortcuts.
+
+Do not open individual scripts from Explorer's compressed ZIP preview. Windows
+otherwise runs each script from a different temporary folder. If you choose the
+ZIP download, use `Extract All` first. Version 1.0.1 and newer detect incomplete
+ZIP-preview execution, recover missing setup automatically, and create a ready
+marker only after every setup step succeeds.
 
 ## Package verification
 
