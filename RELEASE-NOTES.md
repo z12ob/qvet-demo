@@ -42,3 +42,6 @@ Reliability update for the portable QVET recording kit on macOS and Windows.
 - Solana and x402 tests: 30 passed
 - Chromium production tests: 41 passed
 - Release boundary and credential scans: pass
+- Public release package install and verification on Windows: pass
+- Public release package install and verification on macOS 14 Apple silicon: pass
+- Cross-platform evidence: https://github.com/z12ob/qvet-demo/actions/runs/38085759208
