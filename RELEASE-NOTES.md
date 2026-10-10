@@ -44,4 +44,4 @@ Reliability update for the portable QVET recording kit on macOS and Windows.
 - Release boundary and credential scans: pass
 - Public release package install and verification on Windows: pass
 - Public release package install and verification on macOS 14 Apple silicon: pass
-- Cross-platform evidence: https://github.com/z12ob/qvet-demo/actions/runs/38085759208
+- Cross-platform evidence: https://github.com/z12ob/qvet-demo/actions/runs/38085987599
