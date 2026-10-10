@@ -1,47 +1,38 @@
-# QVET Demo v1.0.1
+# QVET Demo v1.1.0
 
-Reliability update for the portable QVET recording kit on macOS and Windows.
+Operator-facing interaction and reliability release for the portable QVET demo kit.
 
-## Installation repair
+## Autonomy cockpit
 
-- Added a one-click Windows installer that downloads, extracts, prepares, and
-  verifies the complete package in a stable per-user location.
-- Added an install-first macOS launcher inside the signed-mode ZIP structure.
-- Added automatic setup recovery to every Run and Verify launcher.
-- Added a durable ready marker that is written only after SUMO dependencies,
-  locked web dependencies, and the production cockpit build all succeed.
-- Moved the Windows Python runtime to a short application-data path to prevent
-  SUMO installation failures caused by legacy path-length limits.
-- Replaced the misleading `Run Setup first` fallback with a precise compressed
-  ZIP or setup-log diagnosis.
-- Added persistent setup logs under `logs/setup.log`.
+- Expanded Earn Nearby from a small sample to 86 genuine H3 Resolution 9 cells
+  across Tbilisi, with restrained reward labels and readable city coverage.
+- Rebuilt route playback around one distance-based pose model so the map,
+  vehicle heading, mini-map, and progress timeline remain synchronized.
+- Added live coverage earnings that begin at $0.00 and accrue as the vehicle
+  crosses each funded Rider Pickup hexagon.
+- Added an enterprise coverage planner with direct cell selection, removal,
+  reset, urgent-cell selection, budget safety, and deterministic integer-atomic
+  pricing based on freshness, road importance, and capture difficulty.
+- Turned Boreas validation into a visible 10-second inspection replay of 2,048
+  real Navtech returns and Applanix pose data with CC BY 4.0 attribution.
+- Added a visible roof sensor pod, transparent surround envelope, range rings,
+  and rotating RF sweep. The 225 m radius is labeled as a demo profile rather
+  than a frozen production hardware claim.
+- Made x402 demo payments unique per browser request while preserving server
+  replay protection for duplicate settlement payloads.
 
-## Highlights
+## Portable launch experience
 
-- Driver-first navigation with 2D overview and heading-aware 3D vehicle follow
-- Route-specific +$2.50 rider incentive and a broader citywide Earn Nearby map
-- Genuine H3 Resolution 9 coverage cells over Tbilisi
-- Distinct Sensor, Body, Local ENU, and persistent WorldGraph views
-- Deterministic QVET replay and attributed Boreas real-sensor validation
-- x402 WorldTile delivery and mock or Devnet settlement presentation
-- 16-intersection Ingolstadt SUMO scenario with adaptive traffic control
-- Operations dashboard and automated package verification launchers
-
-## Package notes
-
-- First setup requires internet access. Python 3.10 or newer and Node.js 22 or
-  newer are used when installed; Windows setup can bootstrap missing tools.
-- Live OpenStreetMap tiles require internet access during the demo.
-- The Autonomy launcher and verification checks wait up to 60 seconds for startup on slower laptops.
-- The release archives do not contain repository history, credentials, or keys.
+- Preserved one-click Windows installation and automatic launcher recovery.
+- Preserved install-first macOS setup for Apple silicon and Intel.
+- Increased the macOS cockpit startup allowance to 90 seconds for slower
+  machines on first launch.
+- Packages remain free of Git history, credentials, environment files, and keys.
 
 ## Validation
 
 - Next.js production build: pass
 - Python unit and integration tests: 144 passed
 - Solana and x402 tests: 30 passed
-- Chromium production tests: 41 passed
-- Release boundary and credential scans: pass
-- Public release package install and verification on Windows: pass
-- Public release package install and verification on macOS 14 Apple silicon: pass
-- Cross-platform evidence: https://github.com/z12ob/qvet-demo/actions/runs/38085987599
+- Updated Chromium autonomy demo tests: 10 passed at desktop, 390px, and 320px
+- Release package verification: performed after publication on Windows and macOS

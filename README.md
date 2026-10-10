@@ -54,10 +54,12 @@ Package controls:
 
 1. Open QVET Autonomy in Driver View.
 2. Compare the direct rider route with the +$2.50 coverage route.
-3. Select 3D Map and play the vehicle-follow navigation sequence.
-4. Switch to Earn Nearby to show citywide paid mapping cells.
-5. Open System Proof to show the four coordinate frames, Boreas capture,
-   WorldGraph output, x402 delivery, and settlement flow.
+3. Select 3D Map and play the heading-correct vehicle-follow sequence. Watch
+   the balance rise from $0.00 as the vehicle crosses funded cells.
+4. Switch to Earn Nearby to show more than 80 citywide paid mapping cells.
+5. Open System Proof and select H3 cells on the enterprise freshness map. Show
+   the deterministic campaign quote, funding action, four coordinate frames,
+   Boreas capture, WorldGraph output, x402 delivery, and settlement flow.
 6. Run the included verification launcher, then record the SUMO district and
    operations dashboard.
 
