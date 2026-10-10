@@ -35,4 +35,5 @@ Operator-facing interaction and reliability release for the portable QVET demo k
 - Python unit and integration tests: 144 passed
 - Solana and x402 tests: 30 passed
 - Updated Chromium autonomy demo tests: 10 passed at desktop, 390px, and 320px
-- Release package verification: performed after publication on Windows and macOS
+- Public release install and verification: passed on Windows and macOS 14
+- Cross-platform evidence: https://github.com/z12ob/qvet-demo/actions/runs/38092474328
