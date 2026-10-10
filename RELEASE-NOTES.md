@@ -17,7 +17,7 @@ The first portable QVET recording kit for macOS and Windows.
 
 - First setup requires internet access, Python 3.10 or newer, and Node.js 22 LTS.
 - Live OpenStreetMap tiles require internet access during the demo.
-- The SUMO and Autonomy launchers wait up to 60 seconds for startup on slower laptops.
+- The Autonomy launcher and verification checks wait up to 60 seconds for startup on slower laptops.
 - The release archives do not contain repository history, credentials, or keys.
 
 ## Validation
