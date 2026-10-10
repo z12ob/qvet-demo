@@ -1,0 +1,2 @@
+98154b459c6299ad312af639b04d935da77a8ab1568cce505ead1d9260e0dcc2  QVET-Demo-macOS.zip
+c55ea07d3c5990f8cd8045ac07a1e3dcb7cd8ba683d227e0e4f103a13e16fd87  QVET-Demo-Windows.zip
