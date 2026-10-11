@@ -1,46 +1,48 @@
-# QVET Demo v1.3.0
+# QVET Demo v1.4.0
 
-Operator-facing coverage intelligence and cross-platform reliability release.
+Operator-facing campaign planning, driver earnings, and portability refinement.
 
-## Autonomy cockpit
+## Coverage campaign planning
 
-- Rebuilt Coverage Planner around 4,032 Resolution 9 H3 cells sampled from
-  drivable OpenStreetMap roads across greater Tbilisi. Forest and water-only
-  cells are excluded.
-- Added road-cell hover intelligence with freshness, observation coverage,
-  last useful pass, road class, and road name.
-- Added progressive urgency layers: Select most urgent starts the campaign,
-  then + and - expand or contract the funded priority band within budget.
-- Moved QVET Replay and Coverage Planner into the primary navigation and removed
-  the redundant message, radar-point, and version strip.
-- Replaced the abstract Local ENU scene with a live road-map replay. Road frame
-  shows ego-stabilized radar returns, while WorldGraph shows persistent features.
-- Kept raw radar and vehicle-centric 360-degree views as distinct technical
-  modes, with expanding sensing shells instead of a rotating scan line.
-- Corrected the driver marker orientation relative to the follow camera and
-  added corner-aware route timing so turns no longer play at constant speed.
-- Preserved gradual $0.00 to $2.50 coverage earnings and red-to-green funded
-  cell refresh during Rider Pickup.
-- Removed optional Boreas artifacts and inactive controls from the portable
-  recording surface.
+- Extended Select most urgent into 12 cumulative priority layers. The first
+  layer isolates the highest-need cells, while later layers expand through all
+  4,032 available Tbilisi road cells.
+- Removed the fixed 50 USDC selection ceiling. The escrow budget now starts at
+  50 USDC and remains editable before campaign funding.
+- Preserved integer atomic USDC accounting for manually entered budgets and
+  added clear funding-gap feedback when a selection exceeds the allocation.
+- Added the calculated campaign price to cell hover details alongside road
+  name, freshness, coverage, road priority, and last useful pass.
+- Deferred marketplace-session initialization until campaign funding to avoid
+  unnecessary cryptographic work while editing the budget.
+
+## Driver earning view
+
+- Added profit, freshness, coverage, road name, and last-mapped details when
+  hovering or tapping an Earn Nearby road cell.
+- Kept the highest-value opportunities permanently labeled without covering
+  the map in thousands of price tags.
+- Distributed priority labels geographically and limited repeated labels per
+  city area for a cleaner map surface.
+- Improved the nearby opportunity list with real road names and compact
+  freshness, coverage, and recency context.
 
 ## Portable launch experience
 
-- SUMO now changes to the extracted package root before constructing auxiliary
-  arguments. GUI settings, block overlays, and error logs remain valid when the
-  package path contains spaces on Windows or macOS.
-- Both archives retain automatic setup recovery and a stable per-user Windows
-  runtime location.
+- Includes the complete QVET Autonomy cockpit, adaptive SUMO traffic demo, and
+  operations dashboard for Windows and macOS without a source repository clone.
+- Automatic setup recovery, space-safe SUMO paths, and stable per-user runtime
+  pointers remain enabled.
 - Packages contain no Git history, credentials, environment files, or keys.
 
 ## Validation
 
 - Next.js production build: pass
 - Python unit and integration tests: 147 passed
-- Solana and x402 tests: 30 passed
-- Chromium production tests: 42 passed at desktop and mobile widths
-- Extracted Windows package from a path containing spaces: structure pass
-- Packaged 4x4 SUMO scenario: pass
-- Packaged 16-intersection SUMO benchmark: pass
-- Packaged comparison report: pass
-- Packaged digital twin stream handshake: pass
+- Solana, marketplace, and x402 tests: 31 passed
+- Chromium production tests: 42 passed across desktop and mobile widths
+- 120-frame playback smoothness check: pass
+- Full Windows setup from an extracted path containing spaces: pass
+- Packaged verification launcher: pass
+- macOS launcher shell syntax and executable archive permissions: pass
+- Archive credential and repository-history inspection: pass
