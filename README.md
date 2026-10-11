@@ -7,8 +7,8 @@ No source repository clone is required.
 ## Included demos
 
 - QVET Autonomy: driver navigation, paid H3 mapping routes, radar replay,
-  WorldGraph construction, Boreas real-sensor validation, x402 data delivery,
-  and Solana settlement proof.
+  WorldGraph construction, enterprise coverage planning, and Solana settlement
+  proof.
 - QVET Traffic: an adaptive 16-intersection microscopic traffic simulation on
   an Ingolstadt OSM network.
 - QVET Operations Dashboard: live queue, wait, throughput, and decision views
@@ -44,9 +44,10 @@ Open Anyway.
 
 Do not open individual scripts from Explorer's compressed ZIP preview. Windows
 otherwise runs each script from a different temporary folder. If you choose the
-ZIP download, use `Extract All` first. Version 1.0.1 and newer detect incomplete
-ZIP-preview execution, recover missing setup automatically, and create a ready
-marker only after every setup step succeeds.
+ZIP download, use `Extract All` first. Version 1.2.0 also repairs Python
+bootstrapping when the local environment is created without pip. Every launcher
+recovers missing setup automatically, and the ready marker is written only after
+the Python runtime and web build both succeed.
 
 ## Package verification
 
@@ -56,10 +57,11 @@ Package controls:
 2. Compare the direct rider route with the +$2.50 coverage route.
 3. Select 3D Map and play the heading-correct vehicle-follow sequence. Watch
    the balance rise from $0.00 as the vehicle crosses funded cells.
-4. Switch to Earn Nearby to show more than 80 citywide paid mapping cells.
-5. Open System Proof and select H3 cells on the enterprise freshness map. Show
-   the deterministic campaign quote, funding action, four coordinate frames,
-   Boreas capture, WorldGraph output, x402 delivery, and settlement flow.
+4. Switch to Earn Nearby to show more than 700 contiguous citywide paid mapping
+   cells.
+5. Open System Proof, then Coverage planner. Select H3 cells directly on the
+   full city map, show the need-weighted quote and funding action, and return to
+   QVET replay for the four coordinate frames and WorldGraph update.
 6. Run the included verification launcher, then record the SUMO district and
    operations dashboard.
 
@@ -70,9 +72,7 @@ The extracted package includes `START-HERE.txt` with the complete walkthrough.
 Verify downloads with `SHA256SUMS.txt` from the release. The packages contain
 no Git history, environment files, credentials, or private keys.
 
-Traffic results are simulation outputs. Autonomy sensor modes are deterministic
-replay and attributed Boreas dataset validation. They are not presented as a
-live municipal or fleet deployment.
+Traffic results are simulation outputs. Autonomy sensing is a deterministic
+fixture replay. Neither is presented as a live municipal or fleet deployment.
 
-Map rendering uses MapLibre GL JS and OpenStreetMap data. Boreas Autonomous
-Driving Dataset material is attributed under CC BY 4.0.
+Map rendering uses MapLibre GL JS and OpenStreetMap data.

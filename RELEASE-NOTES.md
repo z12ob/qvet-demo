@@ -1,39 +1,49 @@
-# QVET Demo v1.1.0
+# QVET Demo v1.2.0
 
-Operator-facing interaction and reliability release for the portable QVET demo kit.
+Operator-facing interface and first-run reliability release for the portable QVET
+demo kit.
 
 ## Autonomy cockpit
 
-- Expanded Earn Nearby from a small sample to 86 genuine H3 Resolution 9 cells
-  across Tbilisi, with restrained reward labels and readable city coverage.
-- Rebuilt route playback around one distance-based pose model so the map,
-  vehicle heading, mini-map, and progress timeline remain synchronized.
-- Added live coverage earnings that begin at $0.00 and accrue as the vehicle
-  crosses each funded Rider Pickup hexagon.
-- Added an enterprise coverage planner with direct cell selection, removal,
-  reset, urgent-cell selection, budget safety, and deterministic integer-atomic
-  pricing based on freshness, road importance, and capture difficulty.
-- Turned Boreas validation into a visible 10-second inspection replay of 2,048
-  real Navtech returns and Applanix pose data with CC BY 4.0 attribution.
-- Added a visible roof sensor pod, transparent surround envelope, range rings,
-  and rotating RF sweep. The 225 m radius is labeled as a demo profile rather
-  than a frozen production hardware claim.
-- Made x402 demo payments unique per browser request while preserving server
-  replay protection for duplicate settlement payloads.
+- Promoted the enterprise Coverage planner to a full System Proof mode with a
+  city-scale OpenStreetMap surface and 762 contiguous H3 Resolution 9 cells.
+- Added direct selection, removal, reset, urgent-cell selection, budget safety,
+  and deterministic integer-atomic campaign pricing.
+- Removed the inactive Boreas and machine-consumer controls from the recording
+  interface so the product story stays focused on the working replay and payer
+  workflow.
+- Replaced verbose system copy and separate telemetry cards with compact
+  overlays, while keeping the replay timeline and primary actions visible.
+- Aligned QVET replay to the same geographic route used in Driver View and made
+  the complete 225 m sensing volume visible by default.
+- Smoothed map bearing across route segments so the vehicle-follow camera turns
+  continuously instead of snapping at polyline boundaries.
+- Rider Pickup coverage now transitions cell-by-cell from stale red to refreshed
+  green, with earnings starting at $0.00 and accruing along the funded route.
+- Earn Nearby now covers a contiguous city territory instead of a small set of
+  disconnected samples.
 
 ## Portable launch experience
 
-- Preserved one-click Windows installation and automatic launcher recovery.
-- Preserved install-first macOS setup for Apple silicon and Intel.
-- Increased the macOS cockpit startup allowance to 90 seconds for slower
-  machines on first launch.
-- Packages remain free of Git history, credentials, environment files, and keys.
+- Fixed first-run setup when a `uv`-created Python environment does not yet
+  contain pip.
+- Fixed SUMO GUI arguments when the extracted package path contains spaces. All
+  auxiliary files are now passed as safe package-relative tokens.
+- Added plain terminal output to Traffic and Verify launchers for consistent
+  rendering on Windows and macOS terminals.
+- Removed unused Boreas payloads from the release archives.
+- Packages remain free of Git history, credentials, environment files, and
+  private keys.
 
 ## Validation
 
 - Next.js production build: pass
-- Python unit and integration tests: 144 passed
+- Python unit and integration tests: 146 passed
 - Solana and x402 tests: 30 passed
-- Updated Chromium autonomy demo tests: 10 passed at desktop, 390px, and 320px
-- Public release install and verification: passed on Windows and macOS 14
-- Cross-platform evidence: https://github.com/z12ob/qvet-demo/actions/runs/38092474328
+- Targeted Chromium Autonomy tests: 9 passed at 1440px, 390px, and 320px
+- Extracted Windows package setup: pass from a path containing spaces
+- Packaged 4x4 SUMO scenario: pass
+- Packaged 16-intersection SUMO benchmark: pass
+- Packaged comparison report: pass
+- Packaged digital twin stream handshake: pass
+- Packaged Autonomy production route: pass
