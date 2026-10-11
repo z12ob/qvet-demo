@@ -1,0 +1,54 @@
+{
+  "artifacts": [
+    {
+      "architectures": [
+        "arm64",
+        "x86_64"
+      ],
+      "artifact": "QVET-Demo-macOS.zip",
+      "byte_size": 972525,
+      "entrypoints": [
+        "Install QVET Demo.command",
+        "Run QVET Autonomy Demo.command",
+        "Run QVET Traffic Demo.command",
+        "Run QVET Dashboard.command"
+      ],
+      "git_repository_included": false,
+      "platform": "macOS",
+      "release_version": "v1.3.0",
+      "requires_network_on_first_setup": true,
+      "runtime_source_included": true,
+      "sha256": "c17ea762f9618473a21790c8d952a586010356e3a9a411d297d469c328d5acc0"
+    },
+    {
+      "architectures": [
+        "x86_64"
+      ],
+      "artifact": "QVET-Demo-Windows.zip",
+      "byte_size": 973209,
+      "entrypoints": [
+        "Install QVET Demo.cmd",
+        "Run QVET Autonomy Demo.cmd",
+        "Run QVET Traffic Demo.cmd",
+        "Run QVET Dashboard.cmd"
+      ],
+      "git_repository_included": false,
+      "platform": "Windows",
+      "release_version": "v1.3.0",
+      "requires_network_on_first_setup": true,
+      "runtime_source_included": true,
+      "sha256": "fbd9c9fff75cce18f35f8c6b8199957fe8a82c7f0453ade20b3cd8684391a01d"
+    }
+  ],
+  "release": "QVET Demo",
+  "source_repository_included": false,
+  "standalone_installers": [
+    {
+      "artifact": "Install-QVET-Demo-Windows.cmd",
+      "byte_size": 2855,
+      "platform": "Windows",
+      "sha256": "c45ae49cad3caf6caef7521a8fbb29a64b48f1290f53e352185cdc8e4b1cf00a"
+    }
+  ],
+  "version": "v1.3.0"
+}

@@ -44,10 +44,10 @@ Open Anyway.
 
 Do not open individual scripts from Explorer's compressed ZIP preview. Windows
 otherwise runs each script from a different temporary folder. If you choose the
-ZIP download, use `Extract All` first. Version 1.2.0 also repairs Python
-bootstrapping when the local environment is created without pip. Every launcher
-recovers missing setup automatically, and the ready marker is written only after
-the Python runtime and web build both succeed.
+ZIP download, use `Extract All` first. Version 1.3.0 keeps SUMO assets safe when
+the extracted path contains spaces. Every launcher recovers missing setup
+automatically, and the ready marker is written only after the Python runtime and
+web build both succeed.
 
 ## Package verification
 
@@ -57,12 +57,14 @@ Package controls:
 2. Compare the direct rider route with the +$2.50 coverage route.
 3. Select 3D Map and play the heading-correct vehicle-follow sequence. Watch
    the balance rise from $0.00 as the vehicle crosses funded cells.
-4. Switch to Earn Nearby to show more than 700 contiguous citywide paid mapping
-   cells.
-5. Open System Proof, then Coverage planner. Select H3 cells directly on the
-   full city map, show the need-weighted quote and funding action, and return to
-   QVET replay for the four coordinate frames and WorldGraph update.
-6. Run the included verification launcher, then record the SUMO district and
+4. Switch to Earn Nearby to show 4,032 road-aligned paid mapping cells across
+   greater Tbilisi.
+5. Open System Proof, then Coverage planner. Select cells directly on the city
+   road network, inspect freshness and coverage details, add or remove urgency
+   layers, and show the integer-atomic campaign quote.
+6. Return to QVET replay for the road-map view, expanding 360-degree sensing
+   pulses, raw radar frame, vehicle frame, and persistent WorldGraph update.
+7. Run the included verification launcher, then record the SUMO district and
    operations dashboard.
 
 The extracted package includes `START-HERE.txt` with the complete walkthrough.

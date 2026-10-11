@@ -1,52 +1,46 @@
-# QVET Demo v1.2.0
+# QVET Demo v1.3.0
 
-Operator-facing interface and first-run reliability release for the portable QVET
-demo kit.
+Operator-facing coverage intelligence and cross-platform reliability release.
 
 ## Autonomy cockpit
 
-- Promoted the enterprise Coverage planner to a full System Proof mode with a
-  city-scale OpenStreetMap surface and 762 contiguous H3 Resolution 9 cells.
-- Added direct selection, removal, reset, urgent-cell selection, budget safety,
-  and deterministic integer-atomic campaign pricing.
-- Removed the inactive Boreas and machine-consumer controls from the recording
-  interface so the product story stays focused on the working replay and payer
-  workflow.
-- Replaced verbose system copy and separate telemetry cards with compact
-  overlays, while keeping the replay timeline and primary actions visible.
-- Aligned QVET replay to the same geographic route used in Driver View and made
-  the complete 225 m sensing volume visible by default.
-- Smoothed map bearing across route segments so the vehicle-follow camera turns
-  continuously instead of snapping at polyline boundaries.
-- Rider Pickup coverage now transitions cell-by-cell from stale red to refreshed
-  green, with earnings starting at $0.00 and accruing along the funded route.
-- Earn Nearby now covers a contiguous city territory instead of a small set of
-  disconnected samples.
+- Rebuilt Coverage Planner around 4,032 Resolution 9 H3 cells sampled from
+  drivable OpenStreetMap roads across greater Tbilisi. Forest and water-only
+  cells are excluded.
+- Added road-cell hover intelligence with freshness, observation coverage,
+  last useful pass, road class, and road name.
+- Added progressive urgency layers: Select most urgent starts the campaign,
+  then + and - expand or contract the funded priority band within budget.
+- Moved QVET Replay and Coverage Planner into the primary navigation and removed
+  the redundant message, radar-point, and version strip.
+- Replaced the abstract Local ENU scene with a live road-map replay. Road frame
+  shows ego-stabilized radar returns, while WorldGraph shows persistent features.
+- Kept raw radar and vehicle-centric 360-degree views as distinct technical
+  modes, with expanding sensing shells instead of a rotating scan line.
+- Corrected the driver marker orientation relative to the follow camera and
+  added corner-aware route timing so turns no longer play at constant speed.
+- Preserved gradual $0.00 to $2.50 coverage earnings and red-to-green funded
+  cell refresh during Rider Pickup.
+- Removed optional Boreas artifacts and inactive controls from the portable
+  recording surface.
 
 ## Portable launch experience
 
-- Fixed first-run setup when a `uv`-created Python environment does not yet
-  contain pip.
-- Fixed SUMO GUI arguments when the extracted package path contains spaces. All
-  auxiliary files are now passed as safe package-relative tokens.
-- Added plain terminal output to Traffic and Verify launchers for consistent
-  rendering on Windows and macOS terminals.
-- Removed unused Boreas payloads from the release archives.
-- Packages remain free of Git history, credentials, environment files, and
-  private keys.
+- SUMO now changes to the extracted package root before constructing auxiliary
+  arguments. GUI settings, block overlays, and error logs remain valid when the
+  package path contains spaces on Windows or macOS.
+- Both archives retain automatic setup recovery and a stable per-user Windows
+  runtime location.
+- Packages contain no Git history, credentials, environment files, or keys.
 
 ## Validation
 
 - Next.js production build: pass
-- Python unit and integration tests: 146 passed
+- Python unit and integration tests: 147 passed
 - Solana and x402 tests: 30 passed
-- Chromium production tests: 42 passed across the landing site, operator
-  console, x402 route, and unified demo at desktop and mobile widths
-- Extracted Windows package setup: pass from a path containing spaces
+- Chromium production tests: 42 passed at desktop and mobile widths
+- Extracted Windows package from a path containing spaces: structure pass
 - Packaged 4x4 SUMO scenario: pass
 - Packaged 16-intersection SUMO benchmark: pass
 - Packaged comparison report: pass
 - Packaged digital twin stream handshake: pass
-- Packaged Autonomy production route: pass
-- Windows and macOS release workflow: pass
-  https://github.com/z12ob/qvet-demo/actions/runs/38101672601
