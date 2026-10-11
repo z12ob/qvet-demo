@@ -40,10 +40,13 @@ demo kit.
 - Next.js production build: pass
 - Python unit and integration tests: 146 passed
 - Solana and x402 tests: 30 passed
-- Targeted Chromium Autonomy tests: 9 passed at 1440px, 390px, and 320px
+- Chromium production tests: 42 passed across the landing site, operator
+  console, x402 route, and unified demo at desktop and mobile widths
 - Extracted Windows package setup: pass from a path containing spaces
 - Packaged 4x4 SUMO scenario: pass
 - Packaged 16-intersection SUMO benchmark: pass
 - Packaged comparison report: pass
 - Packaged digital twin stream handshake: pass
 - Packaged Autonomy production route: pass
+- Windows and macOS release workflow: pass
+  https://github.com/z12ob/qvet-demo/actions/runs/38101672601
