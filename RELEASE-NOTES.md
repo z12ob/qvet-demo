@@ -1,6 +1,6 @@
-# QVET Demo v1.4.0
+# QVET Demo v1.5.0
 
-Operator-facing campaign planning, driver earnings, and portability refinement.
+Portable campaign planning, driver earnings, and system verification release.
 
 ## Coverage campaign planning
 
@@ -34,6 +34,13 @@ Operator-facing campaign planning, driver earnings, and portability refinement.
 - Automatic setup recovery, space-safe SUMO paths, and stable per-user runtime
   pointers remain enabled.
 - Packages contain no Git history, credentials, environment files, or keys.
+
+## Source provenance
+
+- Release manifests record the exact source tag, account-specific commit IDs,
+  and the shared source tree used to build every package.
+- The canonical and mirrored source repositories retain identical file trees,
+  commit messages, timestamps, and branch topology.
 
 ## Validation
 

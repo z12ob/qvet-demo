@@ -1,6 +1,6 @@
 # QVET Demo Distribution
 
-Portable, operator-facing builds of the QVET Traffic and QVET Autonomy demos.
+Portable builds of the QVET Traffic and QVET Autonomy demos.
 Download the package for your operating system from the latest GitHub Release.
 No source repository clone is required.
 
@@ -44,31 +44,16 @@ Open Anyway.
 
 Do not open individual scripts from Explorer's compressed ZIP preview. Windows
 otherwise runs each script from a different temporary folder. If you choose the
-ZIP download, use `Extract All` first. Version 1.4.0 keeps SUMO assets safe when
+ZIP download, use `Extract All` first. Version 1.5.0 keeps SUMO assets safe when
 the extracted path contains spaces. Every launcher recovers missing setup
 automatically, and the ready marker is written only after the Python runtime and
 web build both succeed.
 
 ## Package verification
 
-Package controls:
-
-1. Open QVET Autonomy in Driver View.
-2. Compare the direct rider route with the +$2.50 coverage route.
-3. Select 3D Map and play the heading-correct vehicle-follow sequence. Watch
-   the balance rise from $0.00 as the vehicle crosses funded cells.
-4. Switch to Earn Nearby to show 4,032 road-aligned paid mapping cells across
-   greater Tbilisi. Hover any road cell to inspect its available profit,
-   freshness, coverage, and last mapped date.
-5. Open System Proof, then Coverage planner. Select cells directly on the city
-   road network, enter the campaign budget, inspect need-weighted prices, and
-   move through all 12 priority layers up to complete city-road coverage.
-6. Return to QVET replay for the road-map view, expanding 360-degree sensing
-   pulses, raw radar frame, vehicle frame, and persistent WorldGraph update.
-7. Run the included verification launcher, then record the SUMO district and
-   operations dashboard.
-
-The extracted package includes `START-HERE.txt` with the complete walkthrough.
+Run `Verify QVET Demo` after setup. It validates both SUMO scenarios, report
+generation, the telemetry stream handshake, and the local Autonomy route. The
+extracted package includes `START-HERE.txt` with controls for each demo.
 
 ## Integrity and scope
 

@@ -6,7 +6,7 @@
         "x86_64"
       ],
       "artifact": "QVET-Demo-macOS.zip",
-      "byte_size": 974807,
+      "byte_size": 976518,
       "entrypoints": [
         "Install QVET Demo.command",
         "Run QVET Autonomy Demo.command",
@@ -15,17 +15,17 @@
       ],
       "git_repository_included": false,
       "platform": "macOS",
-      "release_version": "v1.4.0",
+      "release_version": "v1.5.0",
       "requires_network_on_first_setup": true,
       "runtime_source_included": true,
-      "sha256": "83940e9ca2fa4e59caba8091b2db9ff5f5f5c927e2db5809c52b0a68c352515a"
+      "sha256": "eac41f44d0b914865512550f2abb02cf345ec8b0df9cd07cd45a5bc9b9998fd1"
     },
     {
       "architectures": [
         "x86_64"
       ],
       "artifact": "QVET-Demo-Windows.zip",
-      "byte_size": 975490,
+      "byte_size": 977204,
       "entrypoints": [
         "Install QVET Demo.cmd",
         "Run QVET Autonomy Demo.cmd",
@@ -34,21 +34,35 @@
       ],
       "git_repository_included": false,
       "platform": "Windows",
-      "release_version": "v1.4.0",
+      "release_version": "v1.5.0",
       "requires_network_on_first_setup": true,
       "runtime_source_included": true,
-      "sha256": "6ebf531a20b8b00f066bd209843fd829511cd48f99f9eaebc86b9ab86341490f"
+      "sha256": "72b0b14c03abe1f6050cb895c9d915068a4132e19faa13db1eed76ac3f3ee016"
     }
   ],
   "release": "QVET Demo",
+  "source": {
+    "repositories": [
+      {
+        "commit": "36d30cb6db439f2b0945e8e89dd6ff5db232f5cc",
+        "repository": "https://github.com/z12ob/qvet"
+      },
+      {
+        "commit": "a24dc1a7458976e952c9fdffcbaa724bd69fd58f",
+        "repository": "https://github.com/nodolt/QVET"
+      }
+    ],
+    "tag": "v1.5.0",
+    "tree": "386301466757d3fe0e7d970601adb7a0c5342299"
+  },
   "source_repository_included": false,
   "standalone_installers": [
     {
       "artifact": "Install-QVET-Demo-Windows.cmd",
       "byte_size": 2855,
       "platform": "Windows",
-      "sha256": "64587e6727dacffaca2486eca15a1df0cd9703767ec303d699e54522c8260f1d"
+      "sha256": "6fd8bd348a4be054c71b8e6d2c1dadf8f009423abdc8674bc94fd8e1ee3f66c5"
     }
   ],
-  "version": "v1.4.0"
+  "version": "v1.5.0"
 }

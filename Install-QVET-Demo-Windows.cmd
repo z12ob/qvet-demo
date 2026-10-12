@@ -1,7 +1,7 @@
 @echo off
 setlocal EnableExtensions
 
-set "QVET_VERSION=v1.4.0"
+set "QVET_VERSION=v1.5.0"
 if not defined QVET_INSTALL_ROOT set "QVET_INSTALL_ROOT=%LOCALAPPDATA%\QVET\%QVET_VERSION%"
 set "QVET_INSTALL_DIR=%QVET_INSTALL_ROOT%\QVET-Demo"
 set "QVET_DOWNLOAD_URL=https://github.com/z12ob/qvet-demo/releases/download/%QVET_VERSION%/QVET-Demo-Windows.zip"
